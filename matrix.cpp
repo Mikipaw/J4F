@@ -179,3 +179,23 @@ double* matrix::SLAE (matrix* column) const {
 
     return result;
 }
+
+void matrix::uPrT_PrinT() const {
+    size_t y = -column_size + 1, x = -row_size + 1;
+    //printf("%u \t %u \t %u \n", x, y, 0-y);
+
+    while (y != 1) {
+        while (x != 1) {
+            printf("%lf \t",
+                   0[(double*)((char*)data
+                        + ((row_size - 1 - (int)((size_t)(0 - y)))
+                            * column_size + column_size - 1 - (int)((size_t)(0 - x)))
+                            * sizeof(double))]);
+            ++x;
+        }
+        printf("\n");
+        ++y;
+        x = -row_size + 1;
+    }
+
+}

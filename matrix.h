@@ -47,6 +47,8 @@ public:
         column_size = 0;
     }
 
+    void uPrT_PrinT() const;
+
 private:
     matrix replace_column (matrix* column, size_t n_column) const;
 
