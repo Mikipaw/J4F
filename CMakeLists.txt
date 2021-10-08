@@ -3,4 +3,4 @@ project(J4F)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(J4F main.cpp matrix.cpp)
+add_executable(J4F main.cpp matrix.cpp ReversedPolishCalculator.cpp)
